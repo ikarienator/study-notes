@@ -1,6 +1,6 @@
 Statistical Mechanics 01
 
-[> Next](?page=statistical-mechanics-02)
+[> Next](read.php?page=statistical-mechanics-02)
 
 #### Canonical ensemble
 
@@ -107,4 +107,4 @@ $$\begin{align*}
 
 where $C$ is an arbitrary coefficient. This gives us a close form of the distribution of $K$.
 
-[> Next](?page=statistical-mechanics-02)
+[> Next](read.php?page=statistical-mechanics-02)
