@@ -1,10 +1,11 @@
 Statistical Mechanics 01
 
+[> Next](?page=statistical-mechanics-02)
 
 #### Canonical ensemble
 
 Suppose there is a closed system with $N$ subsystems $S_1, S_2, S_3, \ldots S_N$ with conserved
-total energy $\mathcal{E}$ but energy flows among them. At any given time, the state of the system in
+total energy $\mathscr E$ but energy flows among them. At any given time, the state of the system in
 respect of energy can be described as a list $\{E_{S_i}\}$ where $E_{S_i}$ represents
 the energy of subsystem $S_i$.
 
@@ -19,7 +20,7 @@ $$\begin{equation}\sum_j{K_j}=N\label{counter}\end{equation}$$
 
 also because of summability of energy:
 
-$$\begin{equation}\sum_j{K_jE_j}=\mathcal{E}\label{total-energy}\end{equation}$$
+$$\begin{equation}\sum_j{K_jE_j}=\mathscr E\label{total-energy}\end{equation}$$
 
 Under distribution $K$ the **possibility** of picking a subsystem it ends up having energy $E_j$ is:
 
@@ -92,7 +93,7 @@ level calculas). Our problem is to maximize entropy $S$ in respect of $K$, with 
 $\eqref{counter}$ and $\eqref{total-energy}$. Since we have two constraints, we introduce two
 multipliers $\alpha$ and $\beta$, and we got:
 
-$$S'=S-\alpha\sum_j\big({K_j}-N\big)-\beta\sum_j\big({K_jE_j}-\mathcal{E}\big)$$
+$$S'=S-\alpha\sum_j\big({K_j}-N\big)-\beta\sum_j\big({K_jE_j}-\mathscr E\big)$$
 
 The sign for $\beta$ is completely conventional, so its numeric value can be positive.
 The partial derivatives in respect of each $K_j$ must be zero:
@@ -104,4 +105,6 @@ $$\begin{align*}
     K_j &= C\exp(-\beta E_j)
 \end{align*}$$
 
-This gives us a close form of the distribution of $K$.
+where $C$ is an arbitrary coefficient. This gives us a close form of the distribution of $K$.
+
+[> Next](?page=statistical-mechanics-02)
