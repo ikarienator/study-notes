@@ -105,6 +105,7 @@ $$\begin{align*}
     K_j &= C\exp(-\beta E_j)
 \end{align*}$$
 
-where $C$ is an arbitrary coefficient. This gives us a close form of the distribution of $K$.
+where $C$ is an coefficient that can be determined later. This gives us a close form of the
+distribution of $K$.
 
 [> Next](read.php?page=statistical-mechanics-02)
