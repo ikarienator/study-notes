@@ -89,14 +89,14 @@ Now let's work out the distribution.
 #### Distribution of max entropy.
 [Lagrangian multiplier](https://en.wikipedia.org/?title=Lagrange_multiplier) is a algorithm to find
 the maxima or minima of a function subject to equality constraints (which is visited in undergrad
-level calculas). Our problem is to maximize entropy $S$ in respect of $K$, with constrains
+level calculas). Our problem is to maximize entropy $S$ with respect of $K$, with constrains
 $\eqref{counter}$ and $\eqref{total-energy}$. Since we have two constraints, we introduce two
 multipliers $\alpha$ and $\beta$, and we got:
 
 $$S'=S-\alpha\sum_j\big({K_j}-N\big)-\beta\sum_j\big({K_jE_j}-\mathscr E\big)$$
 
 The sign for $\beta$ is completely conventional, so its numeric value can be positive.
-The partial derivatives in respect of each $K_j$ must be zero:
+The partial derivatives with respect of each $K_j$ must be zero:
 
 $$\begin{align*}
     \frac{\partial}{\partial K_j}S - \alpha - \beta E_j &= 0 \\
