@@ -41,7 +41,7 @@ $$\begin{align*}
 
 which is apparently an unitless positive quantity.
 
-#### Maximal likelihood distribution
+#### Maximal likelihood distribution and max entropy
 
 It is assumed that the likelihood of a distribution $\{K_j\}$ is proportional to number of ways of
 combination of $E_j$s can assemble the same distribution. This is a blunt assumption but it is just
