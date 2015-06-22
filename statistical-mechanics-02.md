@@ -2,7 +2,7 @@ Statistical Mechanics 02
 
 [< Prev](read.php?page=statistical-mechanics-01)
 
-#### Partition function $Z(\beta)$
+#### Partition function $Z$
 
 We can re-express $P_j$ now to eliminate $C$.
 
@@ -49,11 +49,22 @@ S &= -\sum_jP_j\ln P_j \\
 
 If we consider $S$ to be a function of $\mathscr E$ and $\beta$:
 
-$$ \mathrm dS = \mathrm d\beta\mathscr E + \beta\mathrm d\mathscr E - \mathscr Ed\beta = \beta\mathrm d\mathscr E $$
-$$ \beta = \frac{\mathrm dS}{\mathrm d\mathscr E} $$
+$$\begin{align*}
+    \mathrm dS &= \mathscr E\mathrm d\beta + \beta\mathrm d\mathscr E + \mathrm d \ln Z \\
+               &= \beta\mathrm d\mathscr E + \mathscr E\mathrm d\beta + (-\mathscr E\mathrm d \beta) \\
+               &= \beta\mathrm d\mathscr E
+\end{align*}$$
 
-This means that $\beta$ has a specific physical meaning. It equals to the amount of maximum entropy
-increases when you put more energy in it. From thermodynamics, we know that $\beta$ is the inverse
-temperature $1/(K_BT)$, where $K_B$ is Boltzmann's constant.
+$$\begin{equation} \beta = \frac{\mathrm dS}{\mathrm d\mathscr E} \end{equation}$$
+
+From thermodynamics, we defined temperature $T$ as:
+
+$$T=\frac{\mathrm d \mathscr E}{\mathrm d S}$$
+
+so
+
+$$ T = \frac 1\beta $$
+
+This gives us the physical meaning of $\beta$.
 
 [< Prev](read.php?page=statistical-mechanics-01)
