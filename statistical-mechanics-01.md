@@ -28,15 +28,15 @@ $$\begin{equation}P_j=\frac{K_j}{N}\end{equation}$$
 
 The definition of **entropy** is:
 
-$$\begin{equation}S=-\sum_j{P_j\log{P_j}}\end{equation}$$
+$$\begin{equation}S=-\sum_j{P_j\ln{P_j}}\end{equation}$$
 
 We can further transform it into:
 
 $$\begin{align*}
-    S &=-\frac 1N\sum_j{K_j\log\frac{K_j}N} \\
-     &=-\frac 1N\sum_j(K_j\log K_j - K_j\log N) \\
-     &= -\frac 1N\sum_j K_j\log K_j + \frac 1N \sum_j K_j\log N \\
-     &= -\frac 1N\sum_j K_j\log K_j + \log N
+    S &=-\frac 1N\sum_j{K_j\ln\frac{K_j}N} \\
+     &=-\frac 1N\sum_j(K_j\ln K_j - K_j\ln N) \\
+     &= -\frac 1N\sum_j K_j\ln K_j + \frac 1N \sum_j K_j\ln N \\
+     &= -\frac 1N\sum_j K_j\ln K_j + \ln N
 \end{align*}$$
 
 which is apparently an unitless positive quantity.
@@ -60,22 +60,22 @@ $$ \Omega = \frac{N!}{\prod_j{K_j!}} $$
 
 It's a function of $K$. Take the logarithm of $Q$:
 
-$$ \log \Omega = \log N!-\sum_j{\log K_j!} $$
+$$ \ln \Omega = \ln N!-\sum_j{\ln K_j!} $$
 
 Using [Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation):
 
-$$ \log n! = n \log n - n + \mathcal{O}(\log n) $$
+$$ \ln n! = n \ln n - n + \mathcal{O}(\ln n) $$
 
 ignoring the [big O](https://en.wikipedia.org/wiki/Big_O_notation):
 
 $$
 \begin{align*}
-  \log \Omega &= N \log N - N - \sum_j \Big(K_j \log K_j - K_j \Big) \\
-      &= N \log N - \sum_j K_j - \sum_j \Big(K_j \log K_j - K_j \Big) \\
-      &= N\log N - \sum_j K_j \log K_j \\
-      &= \sum_jK_j\log N - \sum_j K_j \log K_j \\
-      &= \sum_jK_j\log\frac{N}{K_j} \\
-      &= -N\sum_jP_j\log P_j \\
+  \ln \Omega &= N \ln N - N - \sum_j \Big(K_j \ln K_j - K_j \Big) \\
+      &= N \ln N - \sum_j K_j - \sum_j \Big(K_j \ln K_j - K_j \Big) \\
+      &= N\ln N - \sum_j K_j \ln K_j \\
+      &= \sum_jK_j\ln N - \sum_j K_j \ln K_j \\
+      &= \sum_jK_j\ln\frac{N}{K_j} \\
+      &= -N\sum_jP_j\ln P_j \\
       &= NS
 \end{align*}
 $$
@@ -87,7 +87,7 @@ logarithm of likelihood of a distribution.
 Now let's work out the distribution.
 
 #### Distribution of max entropy.
-[Lagrangian multiplier](https://en.wikipedia.org/?title=Lagrange_multiplier) is a algorithm to find
+[Lagrangian multiplier](https://en.wikipedia.org/?title=Lagrange_multiplier) is an algorithm to find
 the maxima or minima of a function subject to equality constraints (which is visited in undergrad
 level calculas). Our problem is to maximize entropy $S$ with respect of $K$, with constrains
 $\eqref{counter}$ and $\eqref{total-energy}$. Since we have two constraints, we introduce two
@@ -100,8 +100,8 @@ The partial derivatives with respect of each $K_j$ must be zero:
 
 $$\begin{align*}
     \frac{\partial}{\partial K_j}S - \alpha - \beta E_j &= 0 \\
-    \frac{\partial}{\partial K_j}\big(-\frac 1N K_j \log K_j\big) &= \alpha + \beta E_j \\
-    \log K_j + 1 &= -N\big(\alpha + \beta E_j\big) \\
+    \frac{\partial}{\partial K_j}\big(-\frac 1N K_j \ln K_j\big) &= \alpha + \beta E_j \\
+    \ln K_j + 1 &= -N\big(\alpha + \beta E_j\big) \\
     K_j &= C\exp(-\beta E_j)
 \end{align*}$$
 
