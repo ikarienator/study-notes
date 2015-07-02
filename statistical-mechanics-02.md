@@ -70,12 +70,11 @@ This gives us the physical meaning of $\beta$.
 #### Re-expressing things with $\beta$ and $E_j$
 
 $$\begin{align}
-P_i &= \frac 1Z \exp(-\beta E_j) \\
 Z &= \sum_j \exp(-\beta E_j) \\
+P_i &= \frac 1Z \exp(-\beta E_j) \\
 \mathscr E &= -\frac{\mathrm d \ln Z }{\mathrm d\beta} \\
 T &= \frac 1\beta\\
 S &= \beta\mathscr E + \ln Z \\
 \end{align}$$
-
 
 [< Prev](read.php?page=statistical-mechanics-01)
