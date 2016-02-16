@@ -42,14 +42,14 @@ which is apparently an unitless positive quantity.
 
 #### Maximal likelihood distribution and max entropy
 
-It is assumed that the likelihood of a distribution $\{K_j\}$ is proportional to number of ways of
-combination of $E_j$s can assemble the same distribution. This is a blunt assumption but it is just
-like rolling a (possibly unfair) die $N$ times. And the likelihood of the distribution (which is likewise
-defined by the number of times a certain number is produced) $K = \{K_1, K_2, ..., K_6\}$ will be
-intuitively proportional to how many difference series of die rolling result (called "configuration")
-can assemble the same distribution. This relies on the fact that we are rolling exactly the same die,
+It is assumed that the likelihood of a distribution $\{K_j\}$ is proportional to the number of ways the same
+distribution can be assembbled from a combination of $E_j$s. This is a blunt assumption but it is just
+like rolling a (possibly unfair) die $N$ times. And the likelihood of the distribution (which is likewise defined by
+the number of times a certain number is produced) $K = \{K_1, K_2, ..., K_6\}$ will be
+intuitively proportional to the number of different series of die rolling result (called "configuration")
+of a particular distribution. This relies on the fact that we are rolling exactly the same die,
 and likewise, we can assume all the subsystems are essentially equivalent (since we don't have any
-knowledge about the subsystems).
+knowledge on the subsystems).
 
 The total number of different **permutations** that assembles the distribution will be: $N!$. Since we
 are recounting all the **combination**, we have to divide it by the permutations of the same state.
