@@ -5,9 +5,8 @@ Statistical Mechanics 01
 #### Canonical ensemble
 
 Suppose there is a closed system with $N$ subsystems $S_1, S_2, S_3, \ldots S_N$ with conserved
-total energy $\mathscr E$ but energy flows among them. At any given time, the state of the system in
-respect of energy can be described as a list $\{E_{S_i}\}$ where $E_{S_i}$ represents
-the energy of subsystem $S_i$.
+total energy $\mathscr E$ but energy flows among the subsystems. At any given time, the state of the system in
+terms of energy can be described as a list $\{E_{S_i}\}$ where $E_{S_i}$ represents the energy of subsystem $S_i$.
 
 
 Starting with a discrete system where $E_{S_i}$ can be one of $M$ values $E_0, E_1, ...
