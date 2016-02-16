@@ -106,5 +106,5 @@ $$\begin{align*}
 
 where $C$ is an coefficient that can be determined later. This gives us a close form of the
 distribution of $K$.
-
+test/111
 [> Next](read.php?page=statistical-mechanics-02)
