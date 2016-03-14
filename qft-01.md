@@ -91,7 +91,7 @@ $n\times n$ matrices, the wave function has to have $n$ components.
 The smallest such $n$ is $4$.
 
 Unfortuneately, the energy eigen values of Dirac equation can be either
-positive or negative, which implies partiles with negative
+positive or negative, which implies partiles with negative energy.
 
 
 ### Root cause of the issues

@@ -64,5 +64,29 @@ $3$ for boost.
  
 #### Lorentz covariance unitary operators
 Symmetry in quantum theory is represented by unitary or anti-unitary operators through 
-[Wigern's theorem](https://en.wikipedia.org/wiki/Wigner%27s_theorem).
-In order to make Lorentz transform a symmetry.
+[Wigner's theorem](https://en.wikipedia.org/wiki/Wigner%27s_theorem). This means the Lorentz group is
+represented by a unitary operator $U$, that every Lorentz transformation $\Lambda$ corresponds to a
+operator $U(\Lambda)$ that obeys composition rule:
+
+$$
+U(\Lambda')U(\Lambda) = U(\Lambda'\Lambda)
+$$
+
+Some properties of $U$:
+$$\begin{align*}
+U(I)U(I) = U(I) = I \\
+U(\Lambda^{-1})U(\Lambda) = U(I) = I \\
+U(\Lambda^{-1}) = U(\Lambda)^{-1}
+\end{align*}$$
+
+For an infinitesmial Lorentz transformation, we can define a **matrix of operators** $M^{\mu\nu}$ such that:
+
+$$\begin{align*}
+U(I+\Delta\omega)&=I+\frac{i}{2\hbar}\Delta\omega_{\mu\nu} M^{\mu\nu} \\
+\end{align*}$$
+
+$M$ has to be antisymmetric:
+$$\begin{align*}
+U(I+\Delta\omega)U(I-\Delta\omega)&=\left(I+\frac{i}{2\hbar}\Delta\omega_{\mu\nu}M^{\mu\nu}\right)\left(I-\frac{i}{2\hbar}\Delta\omega_{\mu\nu}M^{\mu\nu}\right) \\
+    &= I - \frac{1}{4\hbar^2} \Delta^2 \left(\omega_{\mu\nu}^2M^{\mu\nu}\right)^2 \\
+\end{align*}$$

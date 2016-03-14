@@ -102,9 +102,8 @@ $$
 Similarly, $[a(x), N] = a(x)$.
 
 $$\begin{align*}
-[N, a^\dagger(x)a(x)] &= \int dx^3 [a^\dagger(x)a(x), a^\dagger(x)a(x)]
-[N, a^\dagger(x) a^\dagger(y) a(y) a(x)] &= 
-N a^\dagger(x) a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) a(x) N \\
+[N, a^\dagger(x)a(x)] &= \int dx^3 [a^\dagger(x)a(x), a^\dagger(x)a(x)] \\
+[N, a^\dagger(x) a^\dagger(y) a(y) a(x)] &= N a^\dagger(x) a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) a(x) N \\
                  &= \left([N, a^\dagger(x)] + a^\dagger(x) N\right) a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) \left([a(x), N] + N a(x)\right) \\
                  &= a^\dagger(x)a^\dagger(y) a(y) a(x)  + a^\dagger(x) N a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y)a(x) - a^\dagger(x) a^\dagger(y) a(y) N a(x) \\
                  &= a^\dagger(x) N a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) N a(x) \\
