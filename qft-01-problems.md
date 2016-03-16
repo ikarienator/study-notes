@@ -99,16 +99,33 @@ $$\begin{align*}
 $$
 \left[N,a^\dagger(x)\right] = \int dy^3 a^\dagger(y) a(y) a^\dagger(x)\delta^3(x-y) = a^\dagger(x)
 $$
-Similarly, $[a(x), N] = a(x)$.
+Similarly, $[N, a(x)] = -a(x)$.
+If $\beta$ is a string of $a$ and $a^\dagger$s applying together, that is:
 
 $$\begin{align*}
-[N, a^\dagger(x)a(x)] &= \int dx^3 [a^\dagger(x)a(x), a^\dagger(x)a(x)] \\
-[N, a^\dagger(x) a^\dagger(y) a(y) a(x)] &= N a^\dagger(x) a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) a(x) N \\
-                 &= \left([N, a^\dagger(x)] + a^\dagger(x) N\right) a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) \left([a(x), N] + N a(x)\right) \\
-                 &= a^\dagger(x)a^\dagger(y) a(y) a(x)  + a^\dagger(x) N a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y)a(x) - a^\dagger(x) a^\dagger(y) a(y) N a(x) \\
-                 &= a^\dagger(x) N a^\dagger(y) a(y) a(x) - a^\dagger(x) a^\dagger(y) a(y) N a(x) \\
-                 &= a^\dagger(x) a^\dagger(y) N a(y) a(x) - a^\dagger(x) a^\dagger(y) N a(y) a(x) \\
-                 &= 0 
+    \beta = \, &I \, \, \vert \\
+    &a(x) \beta \, \, \vert \\
+    &a^\dagger(x) \beta
+\end{align*}$$
+
+Then recursively, it can be proved that $[N, \beta]$ returns $(n - m)\beta$ where $n$ is the number of $a^\dagger$s in $\beta$ and $m$ is the number of $a$s in $\beta$.
+
+$$\begin{align*}
+[N, I] &= 0 \\
+\end{align*}$$
+
+if $[N, \beta] = (n - m)\beta$, then
+$$\begin{align*}
+[N, a^\dagger(x)\beta] &= Na^\dagger(x)\beta - a(x)^\dagger\beta N \\
+               & = \left([N, a^\dagger(x)] + a^\dagger(x)N\right)\beta - a^\dagger(x)\beta N \\
+               & = a^\dagger(x)\beta + a^\dagger(x)N\beta - a^\dagger(x)\beta N \\
+               & = a^\dagger(x)\beta + a^\dagger(x)[N, \beta] \\
+               & = \left((n + 1) - m\right)a^\dagger(x)\beta \\
+[N, a(x)\beta] &= Na(x)\beta - a(x)\beta N \\
+               & = \left([N, a(x)] + a(x)N\right)\beta - a(x)\beta N \\
+               & = -a(x)\beta + a(x)N\beta - a(x)\beta N \\
+               & = -a(x)\beta + a(x)[N, \beta] \\
+               & = \left(n - (m + 1)\right)a(x)\beta \\
 \end{align*}$$
 
 Now write down $H$:
@@ -116,6 +133,7 @@ $$
 H = \int dx^3 H_0 a^\dagger(x)a(x) + \frac{1}{2}\int dx^3 dy^3 V(x-y) a^\dagger(x) a^\dagger(y)a(y)a(x)
 $$
 
+Then:
 $$\begin{align*}
 [N, H] &= \int dx^3 H_0 [N, a^\dagger(x)a(x)] + \frac{1}{2}\int dx^3 dy^3 V(x-y) [N, a^\dagger(x) a^\dagger(y)a(y)a(x)] \\
  &=0\\
