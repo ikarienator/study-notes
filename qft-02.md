@@ -244,6 +244,3 @@ $$\begin{align*}
   &= -i\hbar\epsilon_{ijk}J_k\\
 \end{align*}$$
 This means a series of boosts can be a rotation.
-
-#### Commutation properties of the generator of Lorentz transformation II
-TBD
