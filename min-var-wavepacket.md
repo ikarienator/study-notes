@@ -1,6 +1,11 @@
-On minimal uncertainty wavepacket
+On minimal uncertainty wave packet
 
-A minimal uncertainty wavepacket is the a solution of the Schrödinger equation 
+When reviewing MIT OCW 8.04, a conclusion was used without being derived that the minimum
+uncertainty wave packet is
+[a gaussian wave packet](http://www.youtube.com/watch?v=lHhw_SExF1M&t=11m25s).
+ Here I finished the derivation.
+
+A minimal uncertainty wave packet is the a solution of the Schrödinger equation 
 where the production of variance of position and momentum takes exactly the minimum value 
 $\hbar^2/4$.
 
@@ -11,7 +16,7 @@ $$\begin{align*}
 \end{align*}$$
 
 where the $\langle o\rangle$ term is just a number.
-Let $\bar x = x - \langle\bar x \rangle$ and $\bar p = p - \langle\bar p \rangle$.
+Let $\bar x = x - \langle x \rangle$ and $\bar p = p - \langle p \rangle$.
 Therefore the variance of position becomes:  
 $$\begin{align*}
 \mathrm{Var}(x) &= \langle \bar x^2\rangle \\
