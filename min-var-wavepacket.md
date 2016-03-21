@@ -66,14 +66,13 @@ we get that $\lambda$ is purely imaginary. Let $\lambda = -i\sigma^2/\hbar$.
 If $Q=0$:
 $$\begin{align*}
 \bar x\varphi &= \lambda\bar p \varphi \\
-(x - x_0)\varphi &= (-i\hbar \lambda \nabla - \lambda p_0)\varphi \\ 
-    \text{ where } x_0 = \langle x \rangle &\text{ and } p_0 = \langle p \rangle\\
-(x - x_0 + \lambda p_0)\varphi &= -i\hbar \lambda \nabla\varphi \\
-\frac{i}{\hbar}\left(\frac{x - x_0}{-i\sigma^2/\hbar} + p_0\right)\varphi &= \nabla\varphi \\
-\left(-\frac{x - x_0}{\sigma^2} + \frac{ip_0}{\hbar}\right)\varphi &= \nabla\varphi \\
-\varphi &= A\,\mathrm{exp}\left(-\frac{(x-x_0)^2}{2\sigma^2}\right)\mathrm{exp}\left(-i\frac{p_0x}{\hbar}\right) \\
+(x - \langle x \rangle)\varphi &= (-i\hbar \lambda \nabla - \lambda \langle p \rangle)\varphi \\ 
+(x - \langle x \rangle + \lambda \langle p \rangle)\varphi &= -i\hbar \lambda \nabla\varphi \\
+\frac{i}{\hbar}\left(\frac{x - \langle x \rangle}{-i\sigma^2/\hbar} + \langle p \rangle\right)\varphi &= \nabla\varphi \\
+\left(-\frac{x - \langle x \rangle}{\sigma^2} + \frac{i\langle p \rangle}{\hbar}\right)\varphi &= \nabla\varphi \\
+\varphi &= A\,\mathrm{exp}\left(-\frac{(x-\langle x \rangle)^2}{2\sigma^2}\right)\mathrm{exp}\left(\frac{i\langle p \rangle x}{\hbar}\right) \\
 \langle A^2 \rangle &= \sigma \sqrt{\pi} \\
-\varphi &= \frac{1}{\sqrt{\sigma\sqrt{\pi}}}\,\mathrm{exp}\left(-\frac{(x-x_0)^2}{2\sigma^2}\right)\mathrm{exp}\left(-i\frac{p_0x}{\hbar}\right) \\
+\varphi &= \frac{1}{\sqrt{\sigma\sqrt{\pi}}}\,\mathrm{exp}\left(-\frac{(x-\langle x \rangle)^2}{2\sigma^2}\right)\mathrm{exp}\left(\frac{i\langle p \rangle x}{\hbar}\right) \\
 \end{align*}$$
 Also:
 $$\begin{align*}
