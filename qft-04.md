@@ -13,6 +13,22 @@ $$
 e^{-iPx/\hbar}\varphi(0)e^{iPx/\hbar} = \varphi(x)
 $$
 where $Px$ is defined as $P^\mu x_\mu$.
+
+According to [an important lemma](?page=standard-operator-identity),
+$$\begin{align*}
+e^{-iPx/\hbar}\varphi(0)e^{iPx/\hbar} &=
+e^{\mathrm{ad}_{-iPx/\hbar}}\varphi(0) \\
+&= \sum_k \frac{(\mathrm{ad}_{-iPx/\hbar})^k}{k!}\varphi(0)
+\end{align*}$$
+
+Observ how the adjoint operator works on $\varphi$:
+$$\begin{align*}
+\mathrm{ad}_{-iPx/\hbar}\varphi(0)
+&=[{-iP^\mu x_\mu/\hbar},\varphi(0)] \\
+&=[{-\partial^\mu x_\mu},\varphi(0)] \\
+\end{align*}$$
+
+
 We can define a spacetime translation operator:
 $$
 T(a) \equiv \mathrm{exp}(-iP^\mu a_\mu/\hbar)
