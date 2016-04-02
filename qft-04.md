@@ -4,79 +4,94 @@ Quantum Field Theory 04 - Lorentz Invariance (Contd.)
 In Heisenberg picture, time evolution is defined as a unitary transformation
 of the wave function:
 $$
-e^{iHt/\hbar}\varphi(x,0)e^{-iHt/\hbar} = \varphi(x, t)
+\varphi(\mathbf x, t) \equiv e^{iHt/\hbar}\varphi(\mathbf x,0)e^{-iHt/\hbar}
 $$
-Note that this $\varphi$ is a **vector in Hilbert space** indexed by spacetime coordinate.
-
-An obvious relativistic generalization of it should be:
+Note that this $\varphi$ is an **operator** indexed by spacetime coordinate.
+An obvious relativistic generalization should be:
 $$
-e^{-iPx/\hbar}\varphi(0)e^{iPx/\hbar} = \varphi(x)
+\varphi(x) \equiv e^{-ixP/\hbar}\varphi(0)e^{ixP/\hbar}
 $$
-where $Px$ is defined as $P^\mu x_\mu$.
-
-According to [an important lemma](?page=standard-operator-identity),
+where $xP$ is defined as $x_\mu P^\mu$. This can be alternatively done by
+postulationally defining $P^\mu$ in such a way that
+$[P^\mu,\,\cdot\,]=i\hbar\partial^\mu$ using the
+[unnamed lemma](?page=standard-operator-identity). First of all, $[P^\mu,P^\nu]=0$,
+then the summation $xP$ can passthrough each other. Then
 $$\begin{align*}
-e^{-iPx/\hbar}\varphi(0)e^{iPx/\hbar} &=
-e^{\mathrm{ad}_{-iPx/\hbar}}\varphi(0) \\
-&= \sum_k \frac{(\mathrm{ad}_{-iPx/\hbar})^k}{k!}\varphi(0)
+e^{-ixP/\hbar}\varphi(0)e^{ixP/\hbar}
+&= e^{\frac{-ix_\mu}{\hbar}[P^\mu,\,\cdot\,]}\varphi(0) \\
+&= \sum_n\left(\frac{-ix_\mu}{\hbar}[P^\mu,\,\cdot\,]\right)^n \varphi(0)\\
+&= \sum_n\left(x_\mu\partial^\mu\right)^n \varphi(0)\\
+&= \varphi(x) \\
 \end{align*}$$
-
-Observ how the adjoint operator works on $\varphi$:
+From the over way around:
 $$\begin{align*}
-\mathrm{ad}_{-iPx/\hbar}\varphi(0)
-&=[{-iP^\mu x_\mu/\hbar},\varphi(0)] \\
-&=[{-\partial^\mu x_\mu},\varphi(0)] \\
+\partial^\mu \varphi(x) &= \lim_{\varepsilon \to 0} \left(
+    \frac{
+        e^{-i \varepsilon \delta^\mu{}_\nu P^\nu/\hbar}
+        \varphi(x)
+        e^{i \varepsilon \delta^\mu{}_\nu P^\nu/\hbar}
+        - \varphi(x)
+    }{
+        \varepsilon
+    }\right) \\
+ &= \lim_{\varepsilon \to 0} \left(
+    \frac{
+        \varphi(x)
+        -i \varepsilon \delta^\mu{}_\nu [P^\nu, \varphi(x)]/\hbar
+        - \varphi(x)
+    }{
+        \varepsilon
+    }\right) \\
+ &= -i \delta^\mu{}_\nu [P^\nu, \varphi(x)]/\hbar \\
+ &= -i [P^\mu, \varphi(x)]/\hbar
 \end{align*}$$
-
 
 We can define a spacetime translation operator:
-$$
-T(a) \equiv \mathrm{exp}(-iP^\mu a_\mu/\hbar)
-$$
-Then we have
-$$\begin{align*}
-T(a)^{-1}\varphi(x)T(a) &=
-\mathrm{exp}(-iP^\mu a_\mu/\hbar)\varphi(x)\mathrm{exp}(iP^\mu a_\mu/\hbar) \\
-&=
-\left(\sum_k \frac{1}{k!}\left(\frac{-iP^\mu a_\mu}{\hbar}\right)^k\right)
-\varphi(x)
-\left(\sum_k \frac{1}{k!}\left(\frac{iP^\mu a_\mu}{\hbar}\right)^k\right) \\
-&=
-\left(\sum_k \frac{1}{k!}\left(-a_\mu\partial^\mu \right)^k\right)
-\varphi(x)
-\left(\sum_k \frac{1}{k!}\left(a_\mu\partial^\mu \right)^k\right) \\
-\end{align*}$$
 
-
-If we apply Lorentz transformation on the translation operator:
 $$\begin{align*}
-T(a) &= \mathrm{exp}\left(-i P^\mu a_\mu / \hbar \right) \\
-     &= \sum_n \frac{1}{n!}\left(\frac{-iP^\mu a_\mu}{\hbar}\right)^n\\
+T(a) &\equiv \mathrm{exp}(-ia_\mu P^\mu/\hbar) \\
+    &= \sum_n \frac{1}{n!}\left(-\frac{i}{\hbar} a_\mu P^\mu\right)^n\\
+T(-a)^{-1}\varphi(x)T(-a) &= \varphi(x - a)
 \end{align*}$$
-Since $[P^\mu, P^\nu] = 0$:
+This translates the field by $a$.
+
+Again, spacetime translation operator transforms properly under Lorentz transformation:
 $$\begin{align*}
-U(\Lambda)^{-1}T(a)U(\Lambda) &= \sum_n \frac{1}{n!}\left(\frac{-iU(\Lambda)^{-1}P^\mu U(\Lambda) a_\mu}{\hbar}\right)^n\\
-    &= \sum_n \frac{1}{n!}\left(\frac{-i\Lambda^\mu{}_\nu P^\nu a_\mu}{\hbar}\right)^n\\
+U(\Lambda)^{-1}T(a)U(\Lambda) &= \sum_n \frac{1}{n!}\left(-\frac{i}{\hbar} a_\mu U(\Lambda)^{-1}P^\mu U(\Lambda)\right)^n\\
+    &= \sum_n \frac{1}{n!}\left(-\frac{i}{\hbar} \Lambda^\mu{}_\nu a_\mu P^\nu\right)^n\\
+    &= \mathrm{exp}(-i\Lambda^\mu{}_\nu a_\mu P^\nu)^n\\
     &= T(\Lambda^\mu{}_\nu a_\mu)\\
     &= T(\Lambda^{-1} a)\\
+\\
+U(\Lambda)^{-1}T(a)^{-1}U(\Lambda) &= (U(\Lambda)^{-1}T(a)U(\Lambda))^{-1} \\
+&= T(\Lambda^{-1}a)^{-1}
 \end{align*}$$
-
-Therefore,
-$$\begin{align*}
-U(\Lambda)^{-1}\varphi(x)U(\Lambda) &= T(-\Lambda^{-1}x)^{-1}U(\Lambda)\varphi(0)U(\Lambda)^{-1}T(-\Lambda^{-1}x) \\
-\end{align*}$$
-
 For an infinitesimal translation,
 $$
-T(\Delta a) = I -\Delta\frac{i}{\hbar}P^\mu a_\mu
+T(\varepsilon a) = I - \frac{i}{\hbar}\varepsilon a_\mu P^\mu
 $$
-Therefore
-
+This is similar to Lorentz transformation. If we apply the infinitesimal Lorentz transformation
+$\Lambda= 1 + \varepsilon \omega$ to $\varphi$:
 $$\begin{align*}
-U(\Lambda)^{-1}T(\Delta a)U(\Lambda) &=
-    I - \Delta \frac{i}{\hbar}U(\Lambda^{-1})P^\mu a_\mu U(\Lambda)\\
-    &= I - \Delta \frac{i}{\hbar}\Lambda^\mu{}_\nu P^\nu a_\mu \\
-    &= I - \Delta \frac{i}{\hbar} P^\nu (\Lambda^\mu{}_\nu a_\mu) \\
-    &= T(\Delta \Lambda^\mu{}_\nu a_\mu)
+U(\Lambda)^{-1}\varphi(x)U(\Lambda)
+  &= U(1 + \varepsilon \omega)^{-1}\varphi(x)U(1 + \varepsilon \omega) \\
+  &=\left(I - \frac{i}{2\hbar}\varepsilon \omega_{\mu\nu}M^{\mu\nu}\right)
+    \varphi(x)
+    \left(I + \frac{i}{2\hbar}\varepsilon \omega_{\mu\nu}M^{\mu\nu}\right) \\
+&= \varphi(x) -\frac{i}{2\hbar}\varepsilon \omega_{\mu\nu}\left[M^{\mu\nu}, \varphi(x)\right] + o(\varepsilon^2) \\
+\varphi(\Lambda^{-1}x)
+&= \varphi(x + \varepsilon \omega_{\mu\nu} x^\nu) \\
+&= \varphi(x) + \varepsilon \omega_{\mu\nu} x^\nu \partial^\mu \varphi(x)\\
 \end{align*}$$
-the unitary operator added an linear factor on the translate operator.
+Again, compare the two and take the upper half of the matrix:
+$$\begin{align*}
+-\frac{i}{2\hbar}\omega_{\mu\nu}\left[M^{\mu\nu}, \varphi(x)\right]
+&= \omega_{\mu\nu} x^\nu \partial^\mu \varphi(x) \\
+-\frac{i}{2\hbar}\sum_{\mu,\nu}\omega_{\mu\nu}\left[M^{\mu\nu}, \varphi(x)\right]
+&= \sum_{\mu,\nu}\omega_{\mu\nu} x^\nu \partial^\mu \varphi(x) \\
+-\frac{i}{\hbar}\sum_{\mu<\nu}\omega_{\mu\nu}\left[M^{\mu\nu}, \varphi(x)\right]
+&= \sum_{\mu<\nu}\omega_{\mu\nu} (x^\nu \partial^\mu - x^\mu \partial^\nu )\varphi(x) \\
+-\frac{i}{\hbar}\left[M^{\mu\nu}, \varphi(x)\right]
+&= (x^\nu \partial^\mu - x^\mu \partial^\nu )\varphi(x) \\
+\left[M^{\mu\nu}, \varphi(x)\right] &= -i\hbar(x^\mu \partial^\nu - x^\nu \partial^\mu)\varphi(x)\\
+\end{align*}$$

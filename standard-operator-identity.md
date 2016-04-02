@@ -37,3 +37,10 @@ Explicitly, this means:
 $$
 e^XYe^{-X}=Y + [X, Y] + \frac{1}{2!}[X, [X, Y]] + \frac{1}{3!}[X, [X, [X, Y]]] ...
 $$
+
+Also, for an infinitesimal $s=\Delta$:
+$$\begin{align*}
+e^{\Delta X}Ye^{-\Delta X}&=e^{\Delta\mathrm{ad}_X}Y\\
+&= Y + \Delta[X, Y] + o(\Delta^2)\\
+\end{align*}$$
+
