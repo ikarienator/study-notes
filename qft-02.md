@@ -115,9 +115,16 @@ $$
 \omega'_{\mu\nu} U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \omega'_{\mu\nu}\Lambda^\mu{}_\rho\Lambda^\nu{}_{\sigma}M^{\rho\sigma}
 $$
 
-Since $\omega'$ is arbitrary:
+Since $\omega'$ is not arbitrary, we cannot simply remove them. A trick to do this will be
+summing up only the upper-right half of the matrix, and fill in the other half by anti-symmetry
+property:
+$$
+\sum_{\mu,\nu}\omega'_{\mu\nu} U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) =
+\sum_{\mu,\nu}\omega'_{\mu\nu} \Lambda^\mu{}_\rho\Lambda^\nu{}_{\sigma}M^{\rho\sigma} \\
+2\sum_{\mu>\nu}\omega'_{\mu\nu} U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) =
+2\sum_{\mu>\nu}\omega'_{\mu\nu} \Lambda^\mu{}_\rho\Lambda^\nu{}_{\sigma}M^{\rho\sigma} \\
+$$
+Now we can safely remove $\omega'$:
 $$
 U(\Lambda)^{-1}M^{\mu\nu}U(\Lambda) = \Lambda^\mu{}_\rho\Lambda^\nu{}_{\sigma}M^{\rho\sigma}
 $$
-
-In fact, this is a general result: for operator $O$, $U(\Lambda)^{-1}O^\mu U(\Lambda)=\Lambda^\mu{}_\nu O^\nu$

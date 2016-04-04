@@ -1,6 +1,7 @@
 {
     "title": "Study Notes on Physics",
     "pages": [
+        "qft-04",
         "standard-operator-identity",
         "qft-03",
         "min-var-wavepacket",

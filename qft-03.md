@@ -30,9 +30,7 @@ $$\begin{align*}
 \omega_{\rho\sigma}[M^\mu{}^\nu, M^\rho{}^\sigma] &= -2i\hbar \omega_\rho{}_\sigma (g^\nu{}^\rho M^{\mu\sigma} - g^\mu{}^\sigma M^{\rho\nu}) \\
     & = 2i\hbar \omega_\rho{}_\sigma (g^\mu{}^\sigma M^{\rho\nu} - g^\nu{}^\rho M^{\mu\sigma}) \\
 \end{align*}$$
-Since not all the $\omega_{\rho\sigma}$ are independent, we cannot simply divide all the $\omega_{\rho\sigma}$s.
-But all the $\omega_{\rho\sigma}$ of the upper-right triagle are independent.
-We can try to write the sum of the upper-right half (not using Einstein notation for now):
+Again, sum up the upper-right half:
 $$\begin{align*}
 \sum_{\rho,\sigma}\omega_{\rho\sigma}[M^\mu{}^\nu, M^\rho{}^\sigma] &= 2\sum_{\rho<\sigma} \omega_{\rho\sigma}[M^\mu{}^\nu, M^\rho{}^\sigma]\\
 \sum_{\rho,\sigma}
