@@ -1,16 +1,13 @@
 Quantum Field Theory 04 - Lorentz Invariance (Contd.)
 
 ### Quantum scalar field under Lorentz transformation
-$$
-\newcommand{\L}[2]{U({#2})^{-1}{#1}U({#2})}
-\newcommand{\LL}[1]{\L{#1}{\Lambda}}
-$$
 #### Relationship between components of a scalar field
 In this section, let's discuss how a quantum scalar field $\varphi$ would
 transform under Lorentz transformation.
 In Heisenberg picture, time evolution is defined as a unitary transformation
 of operator:
 $$
+\newcommand{\L}[2]{U({#2})^{-1}{#1}U({#2})}\newcommand{\LL}[1]{\L{#1}{\Lambda}}
 \varphi(\mathbf x, t) \equiv e^{iHt/\hbar} \varphi(\mathbf x, 0) e^{-iHt/\hbar}
 $$
 An obvious relativistic generalization is:
