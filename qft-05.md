@@ -133,7 +133,7 @@ To verify (2.16), we add a term $R$ to the equation:
 $$\begin{align*}
 [M^{\mu\nu},M^{\rho\sigma}] &= i\hbar(\delta^{\mu\rho}M^{\nu\sigma} - (\mu \leftrightarrow \nu)) - (\rho \leftrightarrow \sigma) + {\color{red}R} \\
 \end{align*}$$
-Then try to calculate the commuter with $\varphi(x)$:
+Then try to calculate the commutator with $\varphi(x)$:
 $$\begin{align*}
 [\varphi(x), [M^{\mu\nu},M^{\rho\sigma}]]
 &= i\hbar\Big(\delta^{\mu\rho}[\varphi(x), M^{\nu\sigma}] - (\mu \leftrightarrow \nu)\Big) - (\rho \leftrightarrow \sigma) + [\varphi(x), R] \\
