@@ -167,4 +167,5 @@ $$
 \mathcal E_0=\frac{1}{2}\int_{V_E} d^3k\omega.
 $$
 where $V_E$ is the "volume" to integrate momentum over. When $V_E$ is infinite, the $\mathcal E_0$ will be infinite as well, and we get a infinite amount of energy for is the total zero-point energy on the vacuum state. If we constraint the possible momentum to be less than $\Lambda$,called the "**ultraviolet cutoff**", we can constraint the total zero-point energy into a finite value. The we can set $\Omega_0$ in a way if we apply hamiltonian to the vacuum state, we get $0$. Then the hamiltonian becomes simply $$H=\int_{V_E} \widetilde{dk}\,\omega\,a^\dagger(\mathbf k) a(\mathbf k).$$
+We can then define $a(\mathbf k) =  \sqrt{(2\pi)^32\omega}\widetilde a(\mathbf k)$, and $$H=\int\,d^3k\,\omega \widetilde a^\dagger(\mathbf k) \widetilde a(\mathbf k).$$
 This is exactly what we expected from the beginning of the section!
