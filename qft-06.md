@@ -29,7 +29,7 @@ $$
 
 ### A case of classical Lorentz-invariant scalar field
 #### Lagrangian
-Rather than check if this is indeed Lorentz invariant, we can reconstruct this theory from a different point of view, that emphasizes Lorentz invariant from the beginning.
+Rather than check if this is indeed Lorentz invariant, we can reconstruct this theory from a different point of view, that emphasizes Lorentz invariance from the beginning.
 
 Starting from a _**classical**_ real scalar field $\varphi(x)$ that is Lorentz invariant. Note that $\varphi$ is not an operator. One possible theory is the Klein-Gordon equation, $$(-\partial^2+m^2)\varphi(x)=0\,.$$
 
