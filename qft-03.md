@@ -69,7 +69,10 @@ The commutation relationship can therefore be descibed as:
 $$\begin{align*}
 [J_i, J_j] &= i\hbar \epsilon_{ijk}J_k \\
 [J_i, K_j] &= i\hbar \epsilon_{ijk}K_k \\
-[K_i, K_j] &= -i\hbar \epsilon_{ijk}J_k \tag{S 2.17} \label{S 2.17} \\
+[K_i, K_j] &= -i\hbar \epsilon_{ijk}J_k
+\tag{S 2.17}
+\label{S 2.17}
+\\
 \end{align*}$$
 ##### Proof
 $$\begin{align*}
@@ -129,7 +132,8 @@ This means a series of boosts can be a rotation.
 
 Back to the Lorentz transformation of momentum operators:
 $$\begin{align*}
-U(\Lambda)^{-1}P^\mu U(\Lambda) &= \Lambda^\mu{}_\sigma P^\sigma \tag{S 2.15}
+U(\Lambda)^{-1}P^\mu U(\Lambda) &= \Lambda^\mu{}_\sigma P^\sigma
+\tag{S 2.15}
 \end{align*}$$
 Again, let $\Lambda = 1 + \Delta\omega$:
 $$\begin{align*}
@@ -171,7 +175,8 @@ $$\begin{align*}
 \end{align*}$$
 Now we have independent $\omega_{\rho\sigma}$'s at our disposal.
 $$\begin{align*}
-[P^\mu, M^{\rho\sigma}] &= i\hbar \left(g^{\mu\sigma}P^\rho - g^{\mu\rho}P^\sigma\right) \tag{S 2.18} \\
+[P^\mu, M^{\rho\sigma}] &= i\hbar \left(g^{\mu\sigma}P^\rho - g^{\mu\rho}P^\sigma\right)
+\tag{S 2.18} \\
 \end{align*}$$
 
 The relationship with $M$:
