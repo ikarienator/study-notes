@@ -293,6 +293,24 @@ P^i&=\frac{1}{2}\int \widetilde{dk} \, k^i \left(
 
 ---
 
+By the way, combining with $H$, we have:
+
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+P^\mu &= \int \widetilde{dk}\, k^\mu a^\dagger(\k)a(\k) \,.\\
+\end{align*}$$
+Since
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+U(\Lambda)^{-1}P^\mu U(\Lambda) &= \int \widetilde{dk}\, k^\mu a^\dagger(\Lambda^{-1}\k)a(\Lambda^{-1}\k) \\
+&= \int \widetilde{dk}\, \Lambda^\mu{}_\nu k^\nu a^\dagger(\k)a(\k) \\
+&= \Lambda^\mu{}_\nu \P^\nu\,,
+\end{align*}$$
+
+they form a 4-vector of operators. Since the hamiltonian is the total energy of the system, $P^\mu$ is the total momentum of the system.
+
+---
+
 ### Problem 3.5
 > Consider a complex (that is, nonhermitian) scaler field $\varphi$ with a lagrangian density
 $$
@@ -302,6 +320,7 @@ $$
 ---
 
 > a) Show that $\varphi$ obeys the Klein-Gordon equation.
+
 
 ---
 
