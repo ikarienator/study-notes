@@ -168,12 +168,12 @@ $$
 
 We previously postulated that $[P^\mu,\varphi(x)] = i\partial^\mu \varphi(x)$, and proved that the postulation in Srednicki is equivalent to it. To review it, the infinitesimal $T(a)$ is
 $$\begin{align*}
-T(\varepsilon a) &= \exp(-iP^\mu \varepsilon a_\mu)\\
-&= 1 - i \varepsilon P^\mu a_\mu o(\varepsilon^2)\\
-T(\varepsilon a)^{-1}\varphi(x)T(\varepsilon a)
-&= (1 + i\varepsilon P^\mu a_\mu)\varphi(x)(1 - i\varepsilon P^\mu a_\mu)\\
-&= \varphi(x) + i\varepsilon a_\mu [P^\mu, \varphi(x)]\\
-\partial^\mu\varphi(x) &= \lim_{\varepsilon \to 0}\frac{\varphi(x+\delta^\mu{}_\nu a^\nu\varepsilon)-\varphi(x)}{\varepsilon a^\nu} \\
+T(\delta a) &= \exp(-iP^\mu \delta a_\mu)\\
+&= 1 - i \delta P^\mu a_\mu o(\delta^2)\\
+T(\delta a)^{-1}\varphi(x)T(\delta a)
+&= (1 + i\delta P^\mu a_\mu)\varphi(x)(1 - i\delta P^\mu a_\mu)\\
+&= \varphi(x) + i\delta a_\mu [P^\mu, \varphi(x)]\\
+\partial^\mu\varphi(x) &= \lim_{\delta \to 0}\frac{\varphi(x+\delta^\mu{}_\nu a^\nu\delta)-\varphi(x)}{\delta a^\nu} \\
 &= - i [P^\mu, \varphi(x)]\\
 [P^\mu, \varphi(x)] &= i\partial^\mu\varphi(x) \\
 [\varphi(x), P^\mu] &= -i\partial^\mu\varphi(x) \\
@@ -321,10 +321,68 @@ $$
 
 > a) Show that $\varphi$ obeys the Klein-Gordon equation.
 
+Let's add an infinitesimal variance term $\delta\psi$ to $\varphi$ and accordingly, $\delta\psi^\dagger$ is added to $\varphi^\dagger$:
+$$\begin{align*}
+\delta \mathcal L
+    &= -\partial^\mu \delta\psi^\dagger\partial_\mu\varphi
+       -\partial^\mu \varphi^\dagger\partial_\mu\delta\psi
+       -m^2(\delta \psi^\dagger\varphi + \varphi^\dagger\delta \psi) \,,
+    \\
+\delta S &= \int d^4 x \, \left(
+    -\partial^\mu \delta\psi^\dagger\partial_\mu\varphi
+    -\partial^\mu \varphi^\dagger\partial_\mu\delta\psi
+    -m^2(\delta \psi^\dagger\varphi + \varphi^\dagger\delta \psi)
+    \right)\\
+    &= \int d^4 x \, \left(
+    \delta\psi^\dagger\partial^\mu \partial_\mu\varphi
+    +\partial_\mu\partial^\mu\varphi^\dagger\delta\psi
+    -m^2(\delta \psi^\dagger\varphi + \varphi^\dagger\delta \psi)
+    \right)\\
+    &= \int d^4 x \,
+    (\partial^2\varphi - m^2\varphi)\delta\psi^\dagger
+    +(\partial^2\varphi^\dagger - m^2\varphi^\dagger)\delta\psi\\
+    &= 0 \,,\\
+\end{align*}$$
+$$\begin{align*}
+(\partial^2\varphi - m^2\varphi)\delta\psi^\dagger+(\partial^2\varphi^\dagger - m^2\varphi^\dagger)\delta\psi &= 0\,.
+\end{align*}$$
+Now, $\delta\psi$ and $\delta\psi^\dagger$ are not independent. But we know that
+$\delta\psi + \delta\psi^\dagger \equiv \alpha$ and $\delta\psi - \delta\psi^\dagger \equiv \beta$ are indeed indepdent.
+We can reorder this into:
+$$
+\delta\psi = \frac{1}{2}(\alpha + \beta)\\
+\delta\psi^\dagger = \frac{1}{2}(\alpha - \beta)\\
+$$
+$$
+(\partial^2\varphi - m^2\varphi)(\alpha + \beta)
++(\partial^2\varphi^\dagger - m^2\varphi^\dagger)(\alpha - \beta) = 0 \,\\
+$$
+We can re-order it by $\alpha$ and $\beta$ and remove them from the equation since they are arbitrary:
+$$
+(\partial^2\varphi - m^2\varphi) + (\partial^2\varphi^\dagger - m^2\varphi^\dagger) = 0\,\\
+(\partial^2\varphi - m^2\varphi) - (\partial^2\varphi^\dagger - m^2\varphi^\dagger) = 0\,\\
+$$
+Therefore, it is clear that $$\partial^2\varphi - m^2\varphi = 0$$ and $$\partial^2\varphi^\dagger - m^2\varphi^\dagger = 0\,.$$
 
 ---
 
-> b) Threat $\varphi$ and $\varphi^\dagger$ as independent fields, and find the conjugate momentum for each. Complute the hamiltonian density in terms of thease conjugate momenta and the fields themselves (but not their time derivatives).
+> b) Treat $\varphi$ and $\varphi^\dagger$ as independent fields, and find the conjugate momentum for each. Complute the hamiltonian density in terms of thease conjugate momenta and the fields themselves (but not their time derivatives).
+
+Conjugate momentum of $\varphi$ is
+$$\begin{align*}
+\Pi(x) &= \frac{\partial\mathcal L}{\partial \dot\varphi(x)}\\
+&= \dot\varphi^\dagger(x)\,,
+\end{align*}$$
+similarly, $\Pi^\dagger(x) = \dot\varphi(x)$.
+
+The hamiltonian is:
+$$\begin{align*}
+\mathcal H &= \sum \Pi(x)\dot\varphi(x) - \mathcal L \\
+    &= \dot\varphi^\dagger\dot\varphi + \dot\varphi\dot\varphi^\dagger
+        +\partial^\mu\varphi^\dagger\partial_\mu\varphi + m^2\varphi^\dagger\varphi - \Omega_0 \\
+    &= \dot\varphi\dot\varphi^\dagger + \nabla \varphi^\dagger \nabla \varphi + m^2\varphi^\dagger\varphi - \Omega_0 \\
+    &= \Pi^\dagger\Pi + \nabla \varphi^\dagger \nabla \varphi + m^2\varphi^\dagger\varphi - \Omega_0 \\
+\end{align*}$$
 
 ---
 
@@ -335,10 +393,187 @@ $$
 
 > Express $a(\mathbf k)$ and $b(\mathbf k)$ in terms of $\varphi$ and $\varphi^\dagger$ and their time derivative.
 
+The point is this is quite similar to the real scalar field. Let's consider the **on shell** Fourier transformation of the field at time $t$.
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
+\newcommand{tv}[0]{\widetilde\varphi}
+\newcommand{tdv}[0]{\widetilde{\dot\varphi}}
+\widetilde\varphi(\k', t) &= \int dx^3\, e^{-ik'x}\varphi(x) \\
+&= \int \frac{d\x^3 d^3\k}{(2\pi)^3\omega}\,e^{-ik'x}\left[a(\mathbf k)e^{ikx} + b^\dagger(\mathbf k)e^{-ikx}\right]\\
+&= \int \frac{d\x^3 d^3\k}{(2\pi)^32\omega}\,e^{-i(\k'-\k)\x + i(\omega'-\omega)t}\left[a(\mathbf k) + b^\dagger(-\mathbf k)e^{2i\omega t}\right]\\
+&= \int \frac{d^3\k}{2\omega}\,\delta^3(\k'-\k)e^{i(\omega'-\omega)t}\left[a(\mathbf k) + b^\dagger(-\mathbf k)e^{2i\omega t}\right]\\
+&= \frac{1}{2\omega}\left[a(\mathbf k') + b^\dagger(-\mathbf k')e^{2i\omega t}\right]\\
+\\
+\tdv(\k',t) &= \int d\x^3\, e^{-ik'x}\varphi(x) \\
+&= \frac{i}{2}\left[-a(\mathbf k') + b^\dagger(-\mathbf k')e^{2i\omega t}\right] \\
+\end{align*}$$
+$$
+a(\k) = \omega\widetilde\varphi(\k, t)+i \widetilde{\dot\varphi}(\k, t)\\
+$$
+It is time independent. Then the hermitian conjugate of $\varphi(x)$
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\varphi^\dagger(x) &= \int \widetilde{dk}\left[a^\dagger(\mathbf k)e^{-ikx} + b(\mathbf k)e^{ikx}\right] \\
+&= \int \widetilde{dk}\left[b(\mathbf k)e^{ikx} + a^\dagger(\mathbf k)e^{-ikx}\right]\,,\\
+\end{align*}$$
+which means $a$ and $b$ are swapped when $\varphi \to \varphi^\dagger$. We got:
+$$
+b(\k) = \omega\widetilde\varphi^\dagger+i \widetilde{\dot\varphi}^\dagger\,.\\
+$$
+
 ---
 
 > d) Assuming canonical commutation relations for the fields and their conjugate momenta, find the commutation relations obeyed by $a(\mathbf k)$ and $b(\mathbf k)$ and their hermitian conjugates.
 
+Obviously, $a$ and $b$ commutes with themselves in the same way as in the case of real scalar field. This leaves us to the next 2 options:
+$$
+\newcommand{k}[0]{\mathbf k}
+[a(\k),b(\k')] \\
+[a^\dagger(\k),b(\k')]\,. \\
+$$
+And
+$$
+\newcommand{k}[0]{\mathbf k}
+[a(\k),b^\dagger(\k')] = -[a^\dagger(\k), b(\k')]^\dagger \\
+[a^\dagger(\k),b^\dagger(\k')] = -[a(\k), b(\k')]^\dagger \,.\\
+$$
+
+Now,
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
+\newcommand{tv}[0]{\widetilde\varphi}
+\newcommand{tdv}[0]{\widetilde{\dot\varphi}}
+[a(\k),b(\k')]
+&=[\omega\tv+i\tdv,\omega{\tv^\dagger}'+i{\tdv^\dagger}'] \,.\\
+&=i\omega(
+    [\tv,{\tv^\dagger}'] +
+    [\tdv,{\tv^\dagger}'] +
+    [\tv,{\tdv^\dagger}'] +
+    [\tdv,{\tdv^\dagger}']) \,.\\
+\end{align*}$$
+
+Due to causality, commutators are $0$ in space-like distances.
+
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
+\newcommand{tv}[0]{\widetilde\varphi}
+\newcommand{tdv}[0]{\widetilde{\dot\varphi}}
+[\varphi(\x,t), \varphi^\dagger(\x',t)] &= \mathbf 1_{\x=\x'}([\varphi(\x,t), \varphi^\dagger(\x,t)]) = 0 \\
+[\Pi(\x, t), \Pi^\dagger(\x', t)] &= 0 \\
+\\
+[\tv,{\tv^\dagger}'] &= \int d^3xd^3x'\, e^{-ikx+ik'x'}[\varphi(\x, t), \varphi^\dagger(\x', t)] \\
+&= 0 \\
+[\tdv,{\tdv^\dagger}'] &= \int d^3xd^3x'\, e^{-ikx+ik'x'}[\dot\varphi(\x, t), \dot\varphi^\dagger(\x', t)]\\
+    &=  \int d^3xd^3x'\, e^{-ikx+ik'x'}[\Pi^\dagger(\x, t), \Pi(\x', t)] \\
+    & = 0 \\
+\\
+[\tv,{\tdv^\dagger}'] &= \int d^3xd^3x'\, e^{-ikx+ik'x'}[\varphi(\x, t), \dot\varphi^\dagger(\x', t)] \\
+&= \int d^3x d^3x'\, e^{-i(k-k')x+ik(x-x')}[\varphi(\x, t), \Pi(\x', t)] \\
+&= \int d^3x d^3x'\, e^{-i(k-k')x+ik(x-x')}i\delta^3(\x-\x') \\
+&= i\int d^3x \, e^{-i(k-k')x}\\
+&= i\delta^3(\k-\k')\\
+[\tdv,{\tv^\dagger}'] &= [\tv,{\tdv^\dagger}']^\dagger = -i\delta^3(\k-\k') \\
+\\
+[a(\k),b(\k')] &= 0 \\
+[a(\k),b^\dagger(\k')] &= 0 \\
+\end{align*}$$
+
 ---
 
 > e) Express the hamiltonian in terms of $a(\mathbf k)$ and $b(\mathbf k)$ and their hermitian conjugates. What value must $\Omega_0$ have in order for the ground state to have zero energy?
+
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
+\newcommand{tv}[0]{\widetilde\varphi}
+\newcommand{tdv}[0]{\widetilde{\dot\varphi}}
+\mathcal H &= \Pi^\dagger\Pi + \nabla\varphi^\dagger\nabla\varphi + m^2\varphi^\dagger\varphi - \Omega_0 \\
+\\
+\varphi(x) &= \int \widetilde{dk}\, (a(\k)e^{-ikx} + b^\dagger(\k)e^{ikx}) \\
+    &= \int \widetilde{dk}\, (a(\k)e^{-ikx} + b^\dagger(-\k)e^{-ikx-2i\omega t}) \\
+    &= \int \widetilde{dk}\, e^{-ikx}(a(\k) + b^\dagger(-\k)e^{-2i\omega t}) \\
+\varphi^\dagger(x) &= \int \widetilde{dk}\, e^{ikx}(a^\dagger(\k) + b(-\k)e^{2i\omega t}) \\
+\Pi(x) &= \dot\varphi^\dagger(x) \\
+    &= -i\omega \int \widetilde{dk}\, e^{ikx}(a^\dagger(\k) - b(-\k)e^{2i\omega t}) \\
+\Pi^\dagger(x)
+    &= i\omega \int \widetilde{dk}\, e^{-ikx}(a(\k) - b^\dagger(-\k)e^{2i\omega t}) \\
+\nabla\varphi(x) &= \int \widetilde{dk}\, \nabla e^{-ikx}(a(\k) + b^\dagger(-\k)e^{-2i\omega t}) \\
+    &= -i\int \widetilde{dk}\, \k e^{-ikx}(a(\k) + b^\dagger(-\k)e^{-2i\omega t}) \\
+\nabla\varphi^\dagger(x)
+    &= i\int \widetilde{dk}\, \k e^{ikx}(a^\dagger(\k) + b(-\k)e^{2i\omega t}) \\
+\\
+\int \widetilde{dk}\widetilde{dk'}d^3x\, e^{i(k-k')x} f(x, k, k')
+&= (2\pi)^3 \int \widetilde{dk}\widetilde{dk'} \delta^3(\k-\k')\, f(x, k, k')\\
+&= \int \widetilde{dk}\, \frac{1}{2\omega} f(x, k, k)\\
+\\
+\int d^3x\, \varphi^\dagger(x)\varphi(x)
+&= \int \widetilde{dk}\, \frac{1}{2\omega}
+    \left(
+        a^\dagger(\k)a(\k) + b(-\k)b^\dagger(-\k) + \\
+        a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} + \\
+        b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+\\
+\int d^3x\, \nabla\varphi^\dagger(x)\nabla\varphi(x)
+&= \int \widetilde{dk}\, \frac{\k^2}{2\omega}
+    \left(
+        a^\dagger(\k)a(\k) + b(-\k)b^\dagger(-\k) + \\
+        a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} + \\
+        b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+\\
+\int d^3x\, \Pi^\dagger(x)\Pi(x)
+&= \int \widetilde{dk}\, \frac{\omega^2}{2\omega}
+    \left(
+        a(\k)a^\dagger(\k) + b(-\k)b^\dagger(-\k) \\
+        - a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} \\
+        - b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+&= \int \widetilde{dk}\, \frac{\omega^2}{2\omega}
+    \left(
+        a^\dagger(\k)a(\k) + b^\dagger(-\k)b(-\k) \\
+        +[a, a^\dagger] + [b, b^\dagger] \\
+        - a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} \\
+        - b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+&=  2\int \widetilde{dk}\, \frac{\omega^2}{2\omega}
+    (2\pi)^3(2\omega)\delta^3(0)
+    \\&\phantom{=}
+    +\int \widetilde{dk}\, \frac{\omega^2}{2\omega}
+    \left(
+        a^\dagger(\k)a(\k) + b^\dagger(-\k)b(-\k) \\
+        - a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} \\
+        - b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+&=  V_k\int d^3k\, \frac{\omega}{(2\pi)^3}
+    + \int \widetilde{dk}\, \frac{\omega^2}{2\omega}
+    \left(
+        a^\dagger(\k)a(\k) + b^\dagger(-\k)b(-\k) \\
+        - a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} \\
+        - b(-\k)a(\k) e^{2i\omega t} +
+    \right) \\
+\end{align*}$$
+
+$$\begin{align*}
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
+\newcommand{tv}[0]{\widetilde\varphi}
+\newcommand{tdv}[0]{\widetilde{\dot\varphi}}
+H &= \int \widetilde{dk}\, \frac{m^2+\k^2+\omega^2}{2\omega}
+    \left(a^\dagger(\k)a(\k) + b^\dagger(-\k)b(-\k)\right) \\&\phantom{=}
+    +\int \widetilde{dk}\, \frac{m^2+\k^2-\omega^2}{2\omega}
+    \left(a^\dagger(\k)b^\dagger(-\k) e^{-2i\omega t} +
+        b(-\k)a(\k) e^{2i\omega t}
+    \right) \\&\phantom{=}
+    + V_k\int d^3k\,\frac{\omega}{(2\pi)^3} - \Omega_0V_k \\
+&= \int \widetilde{dk}\, \omega \left(a^\dagger(\k)a(\k) + b^\dagger(-\k)b(-\k)\right)
+    + V_k\int d^3k\,\frac{\omega}{(2\pi)^3} - \Omega_0V_k \\
+\end{align*}$$
+Within the ultraviolet cuttoff, we can set
+$$
+\Omega_0 = \int d^3k\,\frac{\omega}{(2\pi)^3}
+$$
+in order for the vacuum to have zero energy.
