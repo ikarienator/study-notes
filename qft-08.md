@@ -10,7 +10,7 @@ Define $\Delta(x) \equiv [\varphi(x), \varphi(0)]$.
 
 We require
 $$
-\forall\,x. x^2 > 0 \implies \Delta(x) =0\,.
+\forall\,x, x_\mu x^\mu > 0 \implies \Delta(x) =0\,.
 $$
 
 Note that the commutator is trivially a Lorentz scalar in our theory (it will be covariant in non-scalar theories):
@@ -72,7 +72,7 @@ For spacelike separation, $x - x' = (0, r, 0, 0)$,
 $$\begin{align*}
 D(x-x') &=  \int d^3\k\,\frac{e^{i k_1 r}}{(2\pi)^32\sqrt{\mathbf k^2 + m^2}} \\
 \end{align*}$$
-This is cylindrical symmetric. We can rewrite this in polar coordinate. Defin $l = \sqrt{k_2^2+k_3^2}$.
+This is cylindrical symmetric. We can rewrite this in polar coordinate. Define $l = \sqrt{k_2^2+k_3^2}$.
 $$\begin{align*}
 D(x-x') &= \frac{1}{2(2\pi)^2} \int dk_1 dl \, \frac{l e^{ik_1r}}{
 \sqrt{k_1^2+l^2+m^2}} \\
