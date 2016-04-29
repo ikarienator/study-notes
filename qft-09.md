@@ -92,7 +92,7 @@ $$
 \langle q_2\vert e^{-i\hat H\delta t}\vert q_1\rangle =
 \int \frac{dp}{2\pi}\,e^{-iH(p,\overline {q_1})\delta t}e^{ip(q_2-q_1)}\,.
 $$
-**We completely removed operators out of the equation!**
+**We completely removed operators from the equation!**
 
 The total integral now becomes:
 $$\begin{align*}
