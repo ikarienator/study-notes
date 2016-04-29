@@ -44,3 +44,5 @@ e^{\Delta X}Ye^{-\Delta X}&=e^{\Delta\mathrm{ad}_X}Y\\
 &= Y + \Delta[X, Y] + o(\Delta^2)\\
 \end{align*}$$
 
+
+ * I found that it is also called "[Hadamard Lemma](https://en.wikipedia.org/wiki/Commutator)".
