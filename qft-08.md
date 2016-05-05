@@ -10,6 +10,8 @@ Define $\Delta(x) \equiv [\varphi(x), \varphi(0)]$.
 
 We require
 $$
+\newcommand{k}[0]{\mathbf k}
+\newcommand{x}[0]{\mathbf x}
 \forall\,x, x_\mu x^\mu > 0 \implies \Delta(x) =0\,.
 $$
 
