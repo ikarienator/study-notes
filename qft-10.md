@@ -1,4 +1,4 @@
-Quantum Field Theory 09 - Path Integrals in (classical) Quantum Mechanics - 02
+Quantum Field Theory 10 - Path Integrals in (classical) Quantum Mechanics - 02
 
 
 ### Generalization
