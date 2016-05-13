@@ -111,7 +111,7 @@ for all compactly supported smooth function $h$ on $(a, b)$, then $f$ is identic
 
 ---
 
-**Definition (Functional derivative)**: Given a manifold $M$ representing functions $\rho$, and a functional $F$ defined as:
+**Definition (Functional derivative)**: Given a manifold $M$ representing function $\rho$, and a functional $F$ defined as:
 $$
 F: M \to \mathbb R\quad\text{or}\quad F:M \to \mathbb C\,,
 $$
@@ -134,22 +134,41 @@ $$
 \end{align*}
 $$
 
-For a special case: $F[f] = f$,
+For a special case: $F[\rho] = \rho(x_1)$, that is, a functional that picks a value out of a function, then we have
 $$
 \begin{align*}
-\frac{\delta F}{\delta f}(x_0) &= \frac{d}{d\varepsilon}\left(f(x)  + \delta(x - x_0)\right)\\
-&= \delta(x-x_0)
+\frac{\delta F}{\delta \rho}(x_0)
+&=
+\left.\frac{d}{d\varepsilon}\left(\rho(x_1) + \varepsilon\delta(x_1 - x_0)\right)\right|_{\varepsilon=0}\\
+&= \delta(x_1-x_0)
 \end{align*}
 $$
 
-> **NOTE**  The definition given by Srednicki is extremely ambiguous. The book tried to define the derivative by:
+> **NOTE** I think this is an abuse of notation, but normally we define:
 $$
-\frac{\delta}{\delta f(t_1)}f(t_2)=\delta(t_1-t_2)\,.
-$$
-
-> First of all, $\frac{\delta}{\delta f(t_1)}$ is severe abuse of the notation; second, the equation is actually saying:
-$$
-\left(\frac{\delta f}{\delta f(t_1)}\right)(t_2)=\delta(t_1-t_2)\,.
+\frac{\delta F}{\delta \rho}(x_0) \equiv \frac{\delta F}{\delta \rho(x_0)}
 $$
 
-> But a human would normally parse the $f(t_2)$ together; third, $t_1$ is an argument to $f(t_1)$, and $t_2$ is an parameter to $\frac{\delta f}{\delta f(t_1)}$, it is not clear that we are treating $F[f] = f(t_1)$ as the functional; fourth, it has never given a way to calculate any functional $F[f]=f$ with respect with anything that is linearly independent.
+> This notation does not make sense. $\rho(x_0)$ is a number. We can simply
+say
+$$
+\frac{\delta F}{\delta \rho} \equiv \lambda x_0. \frac{\partial F[\rho]}{\partial\rho(x_0)}
+$$
+If we think about $\rho$ as an vector. But then this will also be an abuse of notation.
+So we are going to write it the normal way from now on.
+
+Now we can add some more terms in the hamiltonian:
+$$
+H'(p,q)[f,h] = H(p,q) - f(t)q(t) - h(t)p(t)
+$$
+
+Then $\left\langle q'',t'\vert q',t'\right\rangle$ becomes a functional as well:
+$$
+\left\langle q'',t'\vert q',t'\right\rangle[f,h]
+= \int \mathcal Dp\mathcal Dq\, \, \exp[i\int_{t'}^{t''}\,(p\dot q - H(p,q) + fq + hp)]
+$$
+Then
+$$
+-i\frac{\delta}{\delta f(t_1)}\left(\left\langle q'',t'\vert q',t'\right\rangle[f,h]\right)
+= \int \mathcal Dp\mathcal Dq\, \, q(t_1)\exp[i\int_{t'}^{t''}\,(p\dot q - H(p,q) + fq + hp)]
+$$
