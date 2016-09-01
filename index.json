@@ -1,36 +1,47 @@
 {
-    "title": "Bei's Study Notes",
+    "title": "Layman's Study Notes",
+    "category": {
+        "General Relativity - UCI OCW": [
+            "uci-gr/gr-11",
+            "uci-gr/gr-10",
+            "uci-gr/gr-09",
+            "uci-gr/gr-08",
+            "uci-gr/gr-07",
+            "uci-gr/gr-06",
+            "uci-gr/gr-05",
+            "uci-gr/gr-04",
+            "uci-gr/gr-03",
+            "uci-gr/gr-02",
+            "uci-gr/gr-01",
+            "perfect-fluid"
+        ],
+        "Quantum Field Theory": [
+            "qft-10",
+            "qft-09",
+            "take-a-break",
+            "qft-08",
+            "qft-07",
+            "qft-06",
+            "qft-05",
+            "qft-04",
+            "standard-operator-identity",
+            "qft-03",
+            "min-var-wavepacket",
+            "qft-02",
+            "qft-01-problems",
+            "qft-01"
+        ],
+        "General Relativity": [
+            "gr-02",
+            "gr-01",
+            "start-gr"
+        ],
+        "Statistical Mechanics": [
+            "statistical-mechanics-02",
+            "statistical-mechanics-01"
+        ]
+    },
     "pages": [
-        "uci-gr/gr-10",
-        "uci-gr/gr-09",
-        "uci-gr/gr-08",
-        "uci-gr/gr-07",
-        "uci-gr/gr-06",
-        "uci-gr/gr-05",
-        "uci-gr/gr-04",
-        "uci-gr/gr-03",
-        "uci-gr/gr-02",
-        "uci-gr/gr-01",
-        "perfect-fluid",
-        "qft-10",
-        "gr-02",
-        "gr-01",
-        "start-gr",
-        "qft-09",
-        "take-a-break",
-        "qft-08",
-        "qft-07",
-        "qft-06",
-        "qft-05",
-        "qft-04",
-        "standard-operator-identity",
-        "qft-03",
-        "min-var-wavepacket",
-        "qft-02",
-        "qft-01-problems",
-        "qft-01",
-        "statistical-mechanics-02",
-        "statistical-mechanics-01",
         "hello-world"
     ]
 }
