@@ -1,6 +1,11 @@
 {
     "title": "Bei's Study Notes",
     "category": {
+        "General Relativity": [
+            "wald-gr/gr-02",
+            "wald-gr/gr-01",
+            "wald-gr/start-gr"
+        ],
         "General Relativity - UCI OCW": [
             "uci-gr/gr-10",
             "uci-gr/gr-09",
@@ -29,11 +34,6 @@
             "qft-02",
             "qft-01-problems",
             "qft-01"
-        ],
-        "General Relativity": [
-            "gr-02",
-            "gr-01",
-            "start-gr"
         ],
         "Statistical Mechanics": [
             "statistical-mechanics-02",
