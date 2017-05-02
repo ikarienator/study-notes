@@ -96,4 +96,34 @@ To increase the transmission speed of the signal, neurons needs to decrease the 
 
 We don't always want capacitance to be lower. Sometimes we want to integrate signals across time, so it's useful to have a more slowly changing membrane potential that can average signals over time.
 
+## Lesson 1.3: Action Potential
+
 ### Action Potential
+
+Since there are much more potassium channels than sodium channels, the key driver for the membrane potential is the permeability of the sodium channels. There are channels that changes the permeability according to the membrane potential, called voltage gated channels.
+
+There are voltage gated channels for both sodium and potassium. The potassium ones are slightly slower than the sodium ones. When a sodium channel opens, the membrane voltage increases; then the potassium channel opens, the voltage decreases. Both types of channels work together to regulate a temporary elevated potential into a impulse.
+
+### Kinetics
+Kinetics is the probabilistic temporal dynamics of a reaction or movement from one state to another. If the kinetics of the sodium and potassium channel are equal, there will be no action potential. The kinetics also causes a refractory period, which is the time period after one action potential where we cannot easily fire another action potential.
+
+## Lesson 1.4: Action Potential Propagation
+
+The reason to use action potential instead of moving substances around is speed. But like copper wires, the electric signal decays through the axon. One way to solve this, is to increase the voltage. But the -70mV is already close to the breakdown voltage of the neuron. The other way is to amplify the signal every so often.
+
+The speed of the action potential is determined by the capacitance of the membrane and the resistance along the axon. Some animals evolved _giant axons_ to make the resistance lower. The axons in squid is as thick as 1 mm. If human hands were using axons this thick, the hand will has a diameter of over a meter. (This gives an magnitude estimation that there are 1 million neurons for each hand). Instead, some organisms uses extra insulation around the axons to decrease the capacitance of the membrane, this is called myelin. Myelins serves as barriers to ion leakage, thus increase the membrane resistance and lower the membrane capacitance.
+
+Myelins are produced by supporting cells called Glial cells, also known as Glia. The two types of Glias to produce myelins are called Oligodendrocytes in the central nervous system, and Schwann cells in the peripheral nervous system. Apart from water, the glia is mostly made from lipids, which gives the white color of the white matter in the brain. Myelinated axons look like a string of sausages with the space in between the myelins sections contains a high density of voltage gated sodium and potassium channels. This allows for the action potential to jump from node to node. The open nodes are called the Nodes of Ranvier.
+
+## Lesson 1.5 Rate Coding
+
+The shape of the signal does not change, what changes is the rate of the firings.
+
+### Neuropharmacology
+
+Injecting nicotine increases the probability of firing (excitatory). Glutamate decreases the probability of firing (inhibitory).
+(Video: [https://www.mcb80x.org/course/electrical_properties/labs/neuropharmacology](https://www.mcb80x.org/course/electrical_properties/labs/neuropharmacology). I think this experiment is quite flawed. First, we are using the same grasshopper for 3 experiments, this means the injections might interfere with each other. We have draw at least three more hypotheses: 1. too much pressure slowed the neuron down, 2. MSG neutralized the nicotine chemically, or 3. MSG contains sodium ion, which somehow made the neuron firing less intense (I suspect the opposite would happen)).
+
+### The Electromyograph
+(Recording signals to hands and cheek muscles)
+(Recording a grasshopper's visual signals)

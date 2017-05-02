@@ -1,23 +1,26 @@
 {
     "title": "Bei's Study Notes",
     "category": {
+        "Neuroscience": [
+            "mcb80x/part-1"
+        ],
         "General Relativity": [
             "wald-gr/gr-02",
             "wald-gr/gr-01",
             "wald-gr/start-gr"
         ],
         "General Relativity - UCI OCW": [
-            "uci-gr/gr-10",
-            "uci-gr/gr-09",
-            "uci-gr/gr-08",
-            "uci-gr/gr-07",
-            "uci-gr/gr-06",
-            "uci-gr/gr-05",
-            "uci-gr/gr-04",
-            "uci-gr/gr-03",
-            "uci-gr/gr-02",
+            "perfect-fluid",
             "uci-gr/gr-01",
-            "perfect-fluid"
+            "uci-gr/gr-02",
+            "uci-gr/gr-03",
+            "uci-gr/gr-04",
+            "uci-gr/gr-05",
+            "uci-gr/gr-06",
+            "uci-gr/gr-07",
+            "uci-gr/gr-08",
+            "uci-gr/gr-09",
+            "uci-gr/gr-10"
         ],
         "Quantum Field Theory": [
             "qft-10",
