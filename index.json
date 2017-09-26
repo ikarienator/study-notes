@@ -1,8 +1,8 @@
 {
     "title": "Bei's Study Notes",
     "category": {
-        "Neuroscience": [
-            "mcb80x/part-1"
+        "Machine Learning": [
+            "machine-learning/intro"
         ],
         "General Relativity": [
             "wald-gr/gr-02",
@@ -41,6 +41,9 @@
         "Statistical Mechanics": [
             "statistical-mechanics-02",
             "statistical-mechanics-01"
+        ],
+        "Neuroscience": [
+            "mcb80x/part-1"
         ]
     },
     "pages": [
