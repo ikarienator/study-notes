@@ -14,9 +14,9 @@ Depending on the output:
 
 1. Classification
 1. Regression
+1. Clustering
 1. Ranking
 1. Recommendation
-1. Clustering
 
 Also:
 
@@ -35,16 +35,19 @@ Also:
 1. [Kernel machines](/read.php?page=machine-learning/kernel-machine)
 1. [Decision tree](/read.php?page=machine-learning/decision-tree)
 1. [Bayesian Estimation](/read.php?page=machine-learning/baysian-estimation)
-1. Generalized Additive Model
-1. Artificial neural network
-1. Bayesian network
-1. Clustering
+1. [Hidden Markov Models](/read.php?page=machine-learning/hmm)
+1. [Ensemble learning](/read.php?page=machine-learning/emsemble-learning)
+  1. Random Forest
+  1. [Gradient Boosting](/read.php?page=machine-learning/gradient-boosting)
+1. [Graphical models (Bayesian networks)](/read.php?page=machine-learning/baysian-network)
+1. [Clustering](/read.php?page=machine-learning/clustering)
 1. [Association rules learning](/read.php?page=machine-learning/association-rules)
+1. Artificial neural network
 1. Reinforcement learning
+1. Generalized Additive Model
 1. Inductive logic programming
-1. Representation learning
-1. Similarity and metric learning
-1. Sparse dictionary learning
+1. Feature learning
+  1. Sparse dictionary learning
 1. Genetic algorithms
 1. Rule-based machine learning
 1. Learning classifier systems (LCS)
